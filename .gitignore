@@ -1,5 +1,7 @@
 node_modules/
 backend/campus.db
+backend/campus.db-shm
+backend/campus.db-wal
 frontend/dist/
 *.log
 .DS_Store
