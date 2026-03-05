@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>管理员仪表盘 - 校园管理系统</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'PingFang SC','Microsoft YaHei',sans-serif; background:#f5f7fa; }
+.layout { display:flex; height:100vh; }
+.sidebar { width:220px; background:#304156; color:#bfcbd9; flex-shrink:0; }
+.logo { height:60px; display:flex; align-items:center; justify-content:center; font-size:18px; font-weight:bold; color:#fff; border-bottom:1px solid rgba(255,255,255,0.1); }
+.menu-item { padding:14px 20px; cursor:pointer; display:flex; align-items:center; gap:10px; font-size:14px; }
+.menu-item:hover,.menu-item.active { background:rgba(64,158,255,0.2); color:#409eff; }
+.main { flex:1; display:flex; flex-direction:column; }
+.header { height:60px; background:#fff; border-bottom:1px solid #e4e7ed; display:flex; align-items:center; justify-content:flex-end; padding:0 20px; gap:12px; }
+.tag { padding:2px 8px; border-radius:4px; font-size:12px; }
+.tag.danger { background:#fef0f0; color:#f56c6c; }
+.content { padding:20px; flex:1; overflow-y:auto; }
+.stats { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-bottom:20px; }
+.stat-card { background:#fff; border-radius:8px; padding:24px; box-shadow:0 2px 12px rgba(0,0,0,0.1); display:flex; align-items:center; gap:16px; }
+.stat-icon { font-size:40px; }
+.stat-value { font-size:28px; font-weight:bold; color:#303133; }
+.stat-label { font-size:13px; color:#909399; margin-top:4px; }
+.info-card { background:#fff; border-radius:8px; padding:20px; box-shadow:0 2px 12px rgba(0,0,0,0.1); }
+.info-card h3 { margin-bottom:12px; color:#303133; }
+</style>
+</head>
+<body>
+<div class="layout">
+  <div class="sidebar">
+    <div class="logo">🏫 校园管理</div>
+    <div class="menu-item active">📊 仪表盘</div>
+    <div class="menu-item">👨‍🏫 教师管理</div>
+    <div class="menu-item">👨‍🎓 学生管理</div>
+    <div class="menu-item">📚 课程管理</div>
+    <div class="menu-item">📅 开课管理</div>
+    <div class="menu-item">⚙️ 个人信息</div>
+  </div>
+  <div class="main">
+    <div class="header">
+      <span class="tag danger">管理员</span>
+      <span style="font-size:14px; color:#606266;">系统管理员</span>
+      <span style="color:#f56c6c; cursor:pointer; font-size:14px;">退出</span>
+    </div>
+    <div class="content">
+      <h2 style="margin-bottom:20px">仪表盘</h2>
+      <div class="stats">
+        <div class="stat-card">
+          <span class="stat-icon" style="color:#409eff">👨‍🎓</span>
+          <div><div class="stat-value">3</div><div class="stat-label">学生总数</div></div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon" style="color:#67c23a">👨‍🏫</span>
+          <div><div class="stat-value">2</div><div class="stat-label">教师总数</div></div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon" style="color:#e6a23c">📚</span>
+          <div><div class="stat-value">5</div><div class="stat-label">课程总数</div></div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon" style="color:#f56c6c">📅</span>
+          <div><div class="stat-value">5</div><div class="stat-label">本学期开课数</div></div>
+        </div>
+      </div>
+      <div class="info-card">
+        <h3>当前学期: 2024-2025-2</h3>
+        <p>系统运行正常。管理员可通过左侧菜单管理教师、学生、课程及开课信息。</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
